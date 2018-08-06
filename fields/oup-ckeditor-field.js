@@ -277,13 +277,8 @@ define(function (require, exports, module) {
             /* end_builder_helpers */
         });
 
-    Alpaca.registerMessages({
-        "noDependentField": "No local config found"
-    });
     var CKEDITOR = window.CKEDITOR;
-
     var pluginName = "ouphello";
-
     CKEDITOR.plugins.add(pluginName, {
         icons: pluginName,
         init: function (editor) {
@@ -302,6 +297,11 @@ define(function (require, exports, module) {
         }
     });
     window.CKEDITOR.config.extraPlugins = window.CKEDITOR.config.extraPlugins + ",ouphello";
+
+    Alpaca.registerMessages({
+        "noDependentField": "No local config found"
+    });
+
     Alpaca.registerFieldClass("oup-ckeditor", Alpaca.Fields.OUPCKEditorField);
 
 });
