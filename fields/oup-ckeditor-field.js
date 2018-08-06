@@ -277,26 +277,7 @@ define(function (require, exports, module) {
             /* end_builder_helpers */
         });
 
-    var CKEDITOR = window.CKEDITOR;
-    var pluginName = "ouphello";
-    CKEDITOR.plugins.add(pluginName, {
-        icons: pluginName,
-        init: function (editor) {
-
-            // button
-            editor.ui.addButton(pluginName, {
-                label: 'Hello',
-                command: pluginName
-            });
-
-            editor.addCommand(pluginName, {
-                exec: function (editor) {
-                    editor.insertHtml("<em>Hello</em>");
-                }
-            });
-        }
-    });
-    window.CKEDITOR.config.extraPlugins = window.CKEDITOR.config.extraPlugins + ",ouphello";
+    
 
     Alpaca.registerMessages({
         "noDependentField": "No local config found"
