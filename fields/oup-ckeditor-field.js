@@ -209,6 +209,7 @@ define(function (require, exports, module) {
                     "toolbar": [
                         [
                             "H4",
+                            "ouphello",
                             "-",
                             "Italic",
                             "SpecialChar",
@@ -239,7 +240,7 @@ define(function (require, exports, module) {
                     this.options.ckeditor.format_tags  = 'p;h1;h2;h3;h4;pre';
                     this.options.ckeditor = this.toolbarOptions[this.options.ckeditor];
                 }
-
+                window.CKEDITOR.config.extraPlugins = "ouphello";
                 this.base();
             },
 
