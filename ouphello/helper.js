@@ -10,7 +10,7 @@ define(function(require, exports, module) {
     return {
         registerPlugin: function(pluginId, moduleId)
         {
-            var pluginPath = "../../../" + moduleId + "/" + "oup-ckeditor-poc" + "/" + pluginId + "/";
+            var pluginPath = "../../" + moduleId + "/" + "oup-ckeditor-poc" + "/" + pluginId + "/";
 
             CKEDITOR.plugins.addExternal(pluginId, pluginPath, 'plugin.js');
             // CKEDITOR.config.customConfig = pluginPath + "../ckeditor_config.js";
