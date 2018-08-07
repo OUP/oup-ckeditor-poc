@@ -146,6 +146,7 @@ define(function (require, exports, module) {
                             "-",
                             "RemoveFormat"
                         ],
+                        '/',
                         [
                             "Format",
                             "Styles"
