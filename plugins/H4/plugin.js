@@ -35,7 +35,7 @@ define(function(require, exports, module) {
 
             editor.addCommand(pluginName, {
                 exec: function (editor) {
-                    editor.insertHtml("<h4>"+editor.getSelectedHtml().getFirst().getText()+"</h4>");
+                    editor.insertHtml("<h4>"+editor.getSelectedHtml().getHtml()+"</h4>");
                 }
             });
         }
