@@ -1,4 +1,4 @@
-(function() {
+(function(require, exports, module) {
 
     /**
      * Supports configuration like this:
@@ -29,7 +29,7 @@
             // button
             editor.ui.addButton(pluginName, {
                 label: 'Hello',
-                icon: pluginName,
+                icon: '../../../'+module+'/oup-ckeditor-poc/plugins/ouphello/icons/ouphello.png',
                 command: pluginName
             });
 
