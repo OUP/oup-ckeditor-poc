@@ -29,7 +29,7 @@
             // button
             editor.ui.addButton(pluginName, {
                 label: 'Hello',
-                icon: pluginName,
+                icon: this.path + 'icons/ouphello.png',
                 command: pluginName
             });
 
