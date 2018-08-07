@@ -211,6 +211,7 @@ define(function (require, exports, module) {
                             "H4",
                             "ouphello",
                             "-",
+                            '/',
                             "Italic",
                             "SpecialChar",
                             "Subscript",
