@@ -3,8 +3,7 @@ define(function(require, exports, module) {
     
     
     // import here all extra plugins JS files
-    require("./plugins/ouphello/plugin.js");
-    require("./plugins/H4/plugin.js");
+    require("./plugins/plugin.js");
     
     var action = require("./plugins/action.js");
     // register here using below functionCall
