@@ -36,7 +36,8 @@ define(function(require, exports, module) {
             editor.addCommand(pluginName, {
                 exec: function (editor) {
                     if(editor.getData()){
-                        editor.setData("<h4>"+editor.getData()+"</h4>");
+                        //editor.setData("<h4>"+editor.getData().trim()+"</h4>");
+                        console.log(1);
                     }
                 }
             });
