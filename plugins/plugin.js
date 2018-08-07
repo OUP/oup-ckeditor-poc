@@ -19,7 +19,7 @@ define(function (require, exports, module) {
 
                     editor.addCommand(pluginName, {
                         exec: function (editor) {
-                            action.addCommandAction(editor);
+                            addCommandAction(editor);
                         }
                     });
                 }
