@@ -156,10 +156,35 @@ define(function (require, exports, module) {
                     ],
                     "removeButtons": null,
                     "stylesSet": [
-                        
+                        {
+                            "name": "Paragraph",
+                            "element": "p"
+                        },
+                        {
+                            "name": "Heading 2",
+                            "element": "H2"
+                        },
+                        {
+                            "name": "Heading 3",
+                            "element": "H3"
+                        },
                         {
                             "name": "Heading 4",
                             "element": "H4"
+                        },
+                        {
+                            "name": "OUP Custom Inline",
+                            "element": "span",
+                            "attributes": {
+                                "class": "mine"
+                            }
+                        },
+                        {
+                            "name": "OUP bulleted list",
+                            "element": "ul",
+                            "attributes": {
+                                "class": "bullet"
+                            }
                         }
                     ],
                     "cloudcms-image": {
