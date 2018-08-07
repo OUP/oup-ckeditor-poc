@@ -3,7 +3,7 @@ define(function(require, exports, module) {
     
     // import here all extra plugins files
     require("./ouphello/plugin.js");
-    require("./ouphello/icons/ouphello.png");
+    //require("./ouphello/icons/ouphello.png");
 
     var Helper = require("./ouphello/helper.js");
     var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
