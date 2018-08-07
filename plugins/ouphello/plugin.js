@@ -23,14 +23,14 @@
     var pluginName = "ouphello";
 
     CKEDITOR.plugins.add(pluginName, {
-        icon: pluginName,
+        icons: pluginName,
         init: function (editor) {
 
             // button
             editor.ui.addButton(pluginName, {
                 label: 'Hello',
-                command: pluginName,
                 icon: pluginName,
+                command: pluginName
             });
 
             editor.addCommand(pluginName, {
