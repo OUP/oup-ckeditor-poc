@@ -29,7 +29,7 @@
             // button
             editor.ui.addButton(pluginName, {
                 label: 'Hello',
-                icon: this.path + 'icons/ouphello.png',
+                icon: 'https://cms-alb.primary.test.gcms.the-infra.com/_modules-9554bd7eee502f16f4ca/oup-ckeditor-poc/plugins/ouphello/icons/ouphello.png',
                 command: pluginName
             });
 
