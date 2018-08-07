@@ -24,7 +24,7 @@ define(function (require, exports, module) {
                     });
                 }
             });
-            
+
             if (CKEDITOR.config.extraPlugins.length > 0) {
                 CKEDITOR.config.extraPlugins += ",";
             }
