@@ -6,6 +6,5 @@ define(function(require, exports, module) {
     //require("./ouphello/icons/ouphello.png");
 
     var Helper = require("./plugins/ouphello/helper.js");
-    var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
-    Helper.registerPlugin("ouphello", moduleId);
+    
 });

@@ -236,6 +236,9 @@ define(function (require, exports, module) {
              * @see Alpaca.Fields.TextField#setup
              */
             setup: function () {
+                var Helper = require("./plugins/ouphello/helper.js");
+                var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
+                Helper.registerPlugin("ouphello", moduleId);
                 if (this.options.ckeditor && this.toolbarOptions[this.options.ckeditor]) {
                     this.options.ckeditor.format_tags  = 'p;h1;h2;h3;h4;pre';
                     this.options.ckeditor = this.toolbarOptions[this.options.ckeditor];
