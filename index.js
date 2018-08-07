@@ -7,6 +7,6 @@ define(function(require, exports, module) {
     
     var action = require("./plugins/action.js");
     // register here using below functionCall
-    plugin.registerPlugin("ouphello","ouphello",action.h4Action);
-    plugin.registerPlugin("H4","H4",action.h4Action);
+    plugin.generatePlugin("ouphello","ouphello",action.h4Action);
+    plugin.generatePlugin("H4","H4",action.h4Action);
 });
