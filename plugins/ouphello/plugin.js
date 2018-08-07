@@ -16,11 +16,11 @@ define(function(require, exports, module) {
      * }
      */
 
-    var Ratchet = window.Ratchet;
-
     var CKEDITOR = window.CKEDITOR;
 
     var pluginName = "ouphello";
+
+    var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
 
     CKEDITOR.plugins.add(pluginName, {
         icons: pluginName,
@@ -29,7 +29,7 @@ define(function(require, exports, module) {
             // button
             editor.ui.addButton(pluginName, {
                 label: 'Hello',
-                icon: '../../../'+module+'/oup-ckeditor-poc/plugins/ouphello/icons/ouphello.png',
+                icon: '../../../'+moduleId+'/oup-ckeditor-poc/plugins/'+pluginName+'/icons/'+pluginName+'.png',
                 command: pluginName
             });
 
