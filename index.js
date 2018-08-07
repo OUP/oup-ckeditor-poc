@@ -1,4 +1,4 @@
-define(function(require) {
+define(function(require, exports, module) {
     require("./fields/oup-ckeditor-field.js");
 
     var Helper = require("./ouphello/helper.js");
