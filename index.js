@@ -1,12 +1,13 @@
 define(function(require, exports, module) {
     require("./fields/oup-ckeditor-field.js");
     
+    
     // import here all extra plugins JS files
     require("./plugins/ouphello/plugin.js");
     require("./plugins/H4/plugin.js");
     
-    var Helper = require("./plugins/helper.js");
+    var action = require("./plugins/action.js");
     // register here using below functionCall
-    Helper.registerPlugin("ouphello");
-    Helper.registerPlugin("H4");
+    helper.registerPlugin("ouphello","ouphello",action.h4Action);
+    helper.registerPlugin("H4","H4",action.h4Action);
 });

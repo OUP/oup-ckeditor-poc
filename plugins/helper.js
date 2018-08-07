@@ -1,18 +1,12 @@
 define(function (require, exports, module) {
 
     var CKEDITOR = window.CKEDITOR;
+    var plugin = require("./plugin.js");
 
     return {
-        registerPlugin: function (pluginName) {
-            var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
-            var pluginPath = "../../" + moduleId + "/" + "oup-ckeditor-poc" + "/" + pluginName + "/";
+        registerPlugin: function (pluginName, label, action) {            
             
-            CKEDITOR.plugins.addExternal(pluginName, pluginPath, 'plugin.js');
-
-            if (CKEDITOR.config.extraPlugins.length > 0) {
-                CKEDITOR.config.extraPlugins += ",";
-            }
-            CKEDITOR.config.extraPlugins += pluginName;
+            
         }
     };
 });
