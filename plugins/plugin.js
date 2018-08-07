@@ -13,7 +13,7 @@ define(function (require, exports, module) {
 
                     editor.ui.addButton(pluginName, {
                         label: label,
-                        icon: '../../' + moduleId + '/oup-ckeditor-poc/plugins/' + pluginName + '/icons/' + pluginName + '.png',
+                        icon: '../../../' + moduleId + '/oup-ckeditor-poc/plugins/icons/' + pluginName + '.png',
                         command: pluginName
                     });
 
