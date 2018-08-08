@@ -182,9 +182,9 @@ define(function (require, exports, module) {
                         },
                         {
                             "name": "OUP bulleted list",
-                            "element": "ul",
+                            "element": "span",
                             "attributes": {
-                                "style":"list-style: square"
+                                "style":"list-style: square;"
                             }
                         }
                     ],
