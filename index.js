@@ -1,4 +1,5 @@
 define(function (require, exports, module) {
+    require("./fields/oup-ckeditor-field.js");
 
     // Custom plugins/buttons
     var plugin = require("./plugins/plugin.js");
@@ -9,6 +10,4 @@ define(function (require, exports, module) {
     plugin.generatePlugin("H4", "H4", action.actionH4);
 
     CKEDITOR.config.extraPlugins += 'bidi';
-
-    require("./fields/oup-ckeditor-field.js");
 });
