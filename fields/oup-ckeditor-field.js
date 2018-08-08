@@ -181,11 +181,8 @@ define(function (require, exports, module) {
                             }
                         },
                         {
-                            "name": "OUP bulleted list",
-                            "element": "span",
-                            "attributes": {
-                                "style":"list-style: square;"
-                            }
+                            "name": "OUP Bulleted List",
+                            "element": "ul"
                         }
                     ],
                     "cloudcms-image": {
