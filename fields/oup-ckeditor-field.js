@@ -211,8 +211,8 @@ define(function (require, exports, module) {
                         [
                             "H4",
                             "ouphello",
-                            "bidi",
                             "BidiLtr",
+                            "BidiRtl",
                             "-",
                             "Italic",
                             "SpecialChar",
