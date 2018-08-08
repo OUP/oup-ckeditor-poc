@@ -184,7 +184,7 @@ define(function (require, exports, module) {
                             "name": "OUP Bulleted List",
                             "element": "ul",
                             "styles": { 
-                                'list-style-type': 'square' 
+                                'list-style': 'square' 
                             }
                         }
                     ],
