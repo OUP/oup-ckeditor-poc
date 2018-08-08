@@ -174,11 +174,11 @@ define(function (require, exports, module) {
                             "element": "H4"
                         },
                         {
-                            "name": "OUP Custom Inline3",
+                            "name": "OUP Custom Inline4",
                             "element": "span"
                         },
                         {
-                            "name": "OUP Bulleted List3",
+                            "name": "OUP Bulleted List4",
                             "element": "ul"
                         }
                     ],
