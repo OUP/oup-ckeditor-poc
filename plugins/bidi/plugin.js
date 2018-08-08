@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-define( function(require, exports, module) {
+( function() {
 	var guardElements = { table: 1, ul: 1, ol: 1, blockquote: 1, div: 1 },
 		directSelectionGuardElements = {},
 		// All guard elements which can have a direction applied on them.
@@ -209,9 +209,7 @@ define( function(require, exports, module) {
 			}
 		};
 	}
-var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
-return {
-	generatePlugin: function () {
+
 	CKEDITOR.plugins.add( 'bidi', {
 		// jscs:disable maximumLineLength
 		lang: 'af,ar,az,bg,bn,bs,ca,cs,cy,da,de,de-ch,el,en,en-au,en-ca,en-gb,eo,es,es-mx,et,eu,fa,fi,fo,fr,fr-ca,gl,gu,he,hi,hr,hu,id,is,it,ja,ka,km,ko,ku,lt,lv,mk,mn,ms,nb,nl,no,oc,pl,pt,pt-br,ro,ru,si,sk,sl,sq,sr,sr-latn,sv,th,tr,tt,ug,uk,vi,zh,zh-cn', // %REMOVE_LINE_CORE%
@@ -231,7 +229,6 @@ return {
 					editor.ui.addButton( buttonName, {
 						label: buttonLabel,
 						command: commandName,
-						icon: '../../../' + moduleId + '/oup-ckeditor-poc/plugins/bidi/icons/' + 'hidpi/bidiltr' + '.png',
 						toolbar: 'bidi,' + order
 					} );
 				}
@@ -260,8 +257,6 @@ return {
 			} );
 		}
 	} );
-}
-};
 
 	// If the element direction changed, we need to switch the margins of
 	// the element and all its children, so it will get really reflected
@@ -302,7 +297,7 @@ return {
 		methods = [ 'setStyle', 'removeStyle', 'setAttribute', 'removeAttribute' ];
 	for ( var i = 0; i < methods.length; i++ )
 		elementProto[ methods[ i ] ] = CKEDITOR.tools.override( elementProto[ methods[ i ] ], dirChangeNotifier );
-} );
+} )();
 
 /**
  * Fired when the language direction of an element is changed.

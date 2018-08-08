@@ -12,9 +12,9 @@ define(function (require, exports, module) {
     var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
     var pluginPath = "../../../" + moduleId + "/oup-ckeditor-poc/" + "plugins" + "/" + 'bidi' + "/";
 
-    window.CKEDITOR.plugins.addExternal('bidi', pluginPath, 'plugin.js');
+    //window.CKEDITOR.plugins.addExternal('bidi', pluginPath, 'plugin.js');
     var plugin2 = require("./plugins/bidi/plugin.js");
-    plugin2.generatePlugin();
+    //plugin2.generatePlugin();
     window.CKEDITOR.config.extraPlugins += ',bidi';
 
     require("./fields/oup-ckeditor-field.js");
