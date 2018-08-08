@@ -212,6 +212,7 @@ define(function (require, exports, module) {
                             "H4",
                             "ouphello",
                             "bidi",
+                            "BidiLtr",
                             "-",
                             "Italic",
                             "SpecialChar",
