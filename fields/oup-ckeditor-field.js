@@ -174,15 +174,18 @@ define(function (require, exports, module) {
                             "element": "H4"
                         },
                         {
-                            "name": "OUP Custom Inline",
+                            "name": "OUP Custom Inline2",
                             "element": "span",
                             "attributes": {
                                 "class": "mine"
                             }
                         },
                         {
-                            "name": "OUP Bulleted List",
-                            "element": "ul"
+                            "name": "OUP Bulleted List2",
+                            "element": "ul",
+                            "attributes": {
+                                "class": "mine"
+                            }
                         }
                     ],
                     "cloudcms-image": {
