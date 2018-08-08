@@ -9,13 +9,13 @@ define(function (require, exports, module) {
     plugin.generatePlugin("ouphello", "Hello", action.actionOUPHELLO);
     plugin.generatePlugin("H4", "H4", action.actionH4);
 
-    var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
-    var pluginPath = "../../../" + moduleId + "/oup-ckeditor-poc/" + "plugins" + "/" + 'bidi' + "/";
+    //var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
+    //var pluginPath = "../../../" + moduleId + "/oup-ckeditor-poc/" + "plugins" + "/" + 'bidi' + "/";
 
     //window.CKEDITOR.plugins.addExternal('bidi', pluginPath, 'plugin.js');
-    var plugin2 = require("./plugins/bidi/plugin.js");
+    //var plugin2 = require("./plugins/bidi/plugin.js");
     //plugin2.generatePlugin();
-    window.CKEDITOR.config.extraPlugins += ',bidi';
+    //window.CKEDITOR.config.extraPlugins += ',bidi';
 
     require("./fields/oup-ckeditor-field.js");
 });
