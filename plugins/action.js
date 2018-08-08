@@ -8,6 +8,11 @@ define(function (require, exports, module) {
             var newElement = new CKEDITOR.dom.element("h4");
             newElement.setText(editor.getSelection().getSelectedText());
             editor.insertElement(newElement);
+        },
+        actionDIV: function (editor) {
+            var newElement = new CKEDITOR.dom.element("div");
+            newElement.setText(editor.getSelection().getSelectedText());
+            editor.insertElement(newElement);
         }
     };
 

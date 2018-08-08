@@ -203,7 +203,6 @@ define(function (require, exports, module) {
                             "Print",
                             "Preview",
                             "PageBreak",
-                            "NewPage",
                             "-",
                             "Italic",
                             "SpecialChar",
