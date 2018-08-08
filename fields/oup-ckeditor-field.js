@@ -93,10 +93,10 @@ define(function (require, exports, module) {
                             }
                         },
                         {
-                            "name": "OUP bulleted list",
+                            "name": "OUP Bulleted List",
                             "element": "ul",
-                            "attributes": {
-                                "class": "bullet"
+                            "styles": { 
+                                'list-style-type': 'square' 
                             }
                         }
                         
@@ -174,13 +174,18 @@ define(function (require, exports, module) {
                             "element": "H4"
                         },
                         {
-                            "name": "OUP Custom Inline6",
-                            "element": "span"
+                            "name": "OUP Custom Inline",
+                            "element": "span",
+                            "attributes": {
+                                "class": "mine"
+                            }
                         },
                         {
-                            "name": "OUP Bulleted List6",
+                            "name": "OUP Bulleted List",
                             "element": "ul",
-                            styles: { 'list-style-type': 'square' }
+                            "styles": { 
+                                'list-style-type': 'square' 
+                            }
                         }
                     ],
                     "cloudcms-image": {
