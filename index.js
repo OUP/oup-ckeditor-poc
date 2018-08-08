@@ -9,6 +9,7 @@ define(function (require, exports, module) {
     plugin.generatePlugin("ouphello", "Hello", action.actionOUPHELLO);
     plugin.generatePlugin("H4", "H4", action.actionH4);
 
+    require("./plugins/bidi/plugin.js");
     CKEDITOR.config.extraPlugins += ',bidi';
 
     require("./fields/oup-ckeditor-field.js");
