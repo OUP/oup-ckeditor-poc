@@ -6,7 +6,7 @@ define(function (require, exports, module) {
         },
         actionH4: function (editor) {
             var newElement = new CKEDITOR.dom.element("h4");
-            newElement.setText(editor.getSelection().getSelectedText());
+            newElement.setText(editor.getSelection().getSelectedText()+'\b');
             editor.insertElement(newElement);
         }
     };
