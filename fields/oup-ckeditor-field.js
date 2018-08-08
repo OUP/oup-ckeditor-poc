@@ -195,8 +195,9 @@ define(function (require, exports, module) {
                 "config5": {
                     "toolbar": [
                         [
-                            "H4",
                             "ouphello",
+                            "H4",
+                            "DIV",
                             "BidiLtr",
                             "BidiRtl",
                             "-",
