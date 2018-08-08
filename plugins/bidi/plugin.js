@@ -298,7 +298,7 @@ var moduleId = module.uri.match(/^.+(_modules[^\/]+)\/.*/)[1];
 		methods = [ 'setStyle', 'removeStyle', 'setAttribute', 'removeAttribute' ];
 	for ( var i = 0; i < methods.length; i++ )
 		elementProto[ methods[ i ] ] = CKEDITOR.tools.override( elementProto[ methods[ i ] ], dirChangeNotifier );
-} )();
+} );
 
 /**
  * Fired when the language direction of an element is changed.
