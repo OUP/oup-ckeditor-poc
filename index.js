@@ -1,6 +1,6 @@
 define(function (require, exports, module) {
     
-    require("./plugins/bidi/plugin.js");
+    
     // Custom plugins/buttons
     var plugin = require("./plugins/plugin.js");
     var action = require("./plugins/action.js");
@@ -13,8 +13,8 @@ define(function (require, exports, module) {
     var pluginPath = "../../../" + moduleId + "/oup-ckeditor-poc/" + "plugins" + "/" + 'bidi' + "/";
 
     window.CKEDITOR.plugins.addExternal('bidi', pluginPath, 'plugin.js');
-
-    
+    var plugin2 = require("./plugins/bidi/plugin.js");
+    plugin2.generatePlugin();
     window.CKEDITOR.config.extraPlugins += ',bidi';
 
     require("./fields/oup-ckeditor-field.js");
