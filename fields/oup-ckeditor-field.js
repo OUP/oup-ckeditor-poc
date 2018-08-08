@@ -200,6 +200,8 @@ define(function (require, exports, module) {
                             "DIV",
                             "BidiLtr",
                             "BidiRtl",
+                            "spellchecker",
+                            "Smiley",
                             "-",
                             "Print",
                             "Preview",
