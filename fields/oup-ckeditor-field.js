@@ -91,13 +91,6 @@ define(function (require, exports, module) {
                             "attributes": {
                                 "class": "mine"
                             }
-                        },
-                        {
-                            "name": "OUP Bulleted List",
-                            "element": "ul",
-                            "styles": { 
-                                'list-style-type': 'square' 
-                            }
                         }
                         
                     ],
@@ -178,13 +171,6 @@ define(function (require, exports, module) {
                             "element": "span",
                             "attributes": {
                                 "class": "mine"
-                            }
-                        },
-                        {
-                            "name": "OUP Bulleted List",
-                            "element": "ul",
-                            "styles": { 
-                                'list-style': 'square' 
                             }
                         }
                     ],
