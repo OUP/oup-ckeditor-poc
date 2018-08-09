@@ -205,6 +205,7 @@ define(function (require, exports, module) {
                             "DIV",
                             "BidiLtr",
                             "BidiRtl",
+                            "Scayt",
                             "SpellChecker",
                             "Smiley",
                             "-",
