@@ -8,7 +8,10 @@ define(function (require, exports, module) {
     plugin.generatePlugin("H4", "H4", action.actionH4);
     plugin.generatePlugin("DIV", "DIV", action.actionDIV);
 
-    //CKEDITOR.config.extraPlugins += "scayt";
+    if (CKEDITOR.config.extraPlugins.length > 0) {
+        CKEDITOR.config.extraPlugins += ",";
+    }
+    CKEDITOR.config.extraPlugins += "smiley";
 
     require("./fields/oup-ckeditor-field.js");
 });
