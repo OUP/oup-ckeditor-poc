@@ -5,7 +5,7 @@ define(function (require, exports, module) {
     var Alpaca = $.alpaca;
 
     //window.CKEDITOR.config.scayt_autoStartup = true;
-    config.disableNativeSpellChecker = false;
+    window.CKEDITOR.config.disableNativeSpellChecker = false;
 
     Alpaca.Fields.OUPCKEditorField = Alpaca.Fields.CKEditorField.extend(
         /**
