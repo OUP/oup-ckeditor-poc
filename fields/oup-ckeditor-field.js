@@ -149,6 +149,7 @@ define(function (require, exports, module) {
                             "Format",
                             "Styles"
                         ],
+                        '/',
                         [
                             "cloudcms-image"
                         ]
