@@ -4,6 +4,9 @@ define(function (require, exports, module) {
 
     var Alpaca = $.alpaca;
 
+    config.scayt_autoStartup = true;
+    //config.disableNativeSpellChecker = false;
+
     Alpaca.Fields.OUPCKEditorField = Alpaca.Fields.CKEditorField.extend(
         /**
          * @lends Alpaca.Fields.OUPCKEditorField.prototype
