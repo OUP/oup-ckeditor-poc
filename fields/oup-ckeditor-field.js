@@ -7,6 +7,7 @@ define(function (require, exports, module) {
     //window.CKEDITOR.config.scayt_autoStartup = true;
     //window.CKEDITOR.config.wsc_autoStartup = true;
     //window.CKEDITOR.config.disableNativeSpellChecker = false;
+    window.CKEDITOR.config.removePlugins = 'scayt';
 
     Alpaca.Fields.OUPCKEditorField = Alpaca.Fields.CKEditorField.extend(
         /**
