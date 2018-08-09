@@ -206,6 +206,8 @@ define(function (require, exports, module) {
                             "BidiRtl",
                             "Scayt",
                             "WSC",
+                            "Wsc",
+                            "wsc",
                             "Smiley",
                             "-",
                             "Print",
