@@ -4,7 +4,7 @@ define(function (require, exports, module) {
 
     var Alpaca = $.alpaca;
 
-    window.CKEDITOR.config.scayt_autoStartup = true;
+    //window.CKEDITOR.config.scayt_autoStartup = true;
     window.CKEDITOR.config.wsc_autoStartup = true;
     //window.CKEDITOR.config.disableNativeSpellChecker = false;
 
@@ -204,10 +204,8 @@ define(function (require, exports, module) {
                             "DIV",
                             "BidiLtr",
                             "BidiRtl",
-                            "Scayt",
                             "WSC",
                             "Wsc",
-                            "wsc",
                             "Smiley",
                             "-",
                             "Print",
