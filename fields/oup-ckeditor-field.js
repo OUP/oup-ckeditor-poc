@@ -204,6 +204,7 @@ define(function (require, exports, module) {
                             "BidiLtr",
                             "BidiRtl",
                             "Scayt",
+                            "WSC",
                             "Smiley",
                             "-",
                             "Print",
