@@ -8,7 +8,7 @@ define(function (require, exports, module) {
     //window.CKEDITOR.config.wsc_autoStartup = true;
     //window.CKEDITOR.config.disableNativeSpellChecker = false;
     //window.CKEDITOR.config.removePlugins = 'scayt';
-    window.CKEDITOR.config.format_tags = "p;h1;h2;h3;h4;";
+    window.CKEDITOR.config.format_tags = "p;h1;h2;h3;h4";
 
     Alpaca.Fields.OUPCKEditorField = Alpaca.Fields.CKEditorField.extend(
         /**
