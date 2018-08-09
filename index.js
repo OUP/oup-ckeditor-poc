@@ -8,5 +8,7 @@ define(function (require, exports, module) {
     plugin.generatePlugin("H4", "H4", action.actionH4);
     plugin.generatePlugin("DIV", "DIV", action.actionDIV);
 
+    CKEDITOR.config.extraPlugins += "scayt";
+
     require("./fields/oup-ckeditor-field.js");
 });

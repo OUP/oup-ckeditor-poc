@@ -4,8 +4,8 @@ define(function (require, exports, module) {
 
     var Alpaca = $.alpaca;
 
-    //window.CKEDITOR.config.scayt_autoStartup = true;
-    window.CKEDITOR.config.disableNativeSpellChecker = false;
+    window.CKEDITOR.config.scayt_autoStartup = true;
+    //window.CKEDITOR.config.disableNativeSpellChecker = false;
 
     Alpaca.Fields.OUPCKEditorField = Alpaca.Fields.CKEditorField.extend(
         /**
@@ -204,6 +204,7 @@ define(function (require, exports, module) {
                             "BidiLtr",
                             "BidiRtl",
                             "spellchecker",
+                            "scayt",
                             "Smiley",
                             "-",
                             "Print",
