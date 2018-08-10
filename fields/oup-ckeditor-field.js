@@ -8,7 +8,6 @@ define(function (require, exports, module) {
     //window.CKEDITOR.config.wsc_autoStartup = true;
     //window.CKEDITOR.config.disableNativeSpellChecker = false;
     //window.CKEDITOR.config.removePlugins = 'scayt';
-    window.CKEDITOR.config.format_tags = "p;h1;h2;h3;h4";
 
     Alpaca.Fields.OUPCKEditorField = Alpaca.Fields.CKEditorField.extend(
         /**
@@ -97,6 +96,13 @@ define(function (require, exports, module) {
                             "attributes": {
                                 "class": "mine"
                             }
+                        },
+                        {
+                            "name": "OUP bulleted list",
+                            "element": "ul",
+                            "attributes": {
+                                "class": "bullet"
+                            }
                         }
                         
                     ],
@@ -150,7 +156,6 @@ define(function (require, exports, module) {
                             "Format",
                             "Styles"
                         ],
-                        '/',
                         [
                             "cloudcms-image"
                         ]
@@ -179,6 +184,13 @@ define(function (require, exports, module) {
                             "attributes": {
                                 "class": "mine"
                             }
+                        },
+                        {
+                            "name": "OUP bulleted list",
+                            "element": "ul",
+                            "attributes": {
+                                "class": "bullet"
+                            }
                         }
                     ],
                     "cloudcms-image": {
@@ -202,14 +214,7 @@ define(function (require, exports, module) {
                 "config5": {
                     "toolbar": [
                         [
-                            "ouphello",
-                            "H4",
-                            "DIV",
-                            "BidiLtr",
-                            "BidiRtl",
-                            "Scayt",
-                            "SpellChecker",
-                            "Smiley",
+                            "Styles",
                             "-",
                             "Print",
                             "Preview",
@@ -225,7 +230,18 @@ define(function (require, exports, module) {
                             "-",
                             "ShowBlocks"
                         ]
-                    ]
+                    ],
+                    "removeButtons": null,                   
+                    "stylesSet": [
+                        {
+                            "name": "Paragraph",
+                            "element": "p"
+                        },
+                        {
+                            "name": "Heading 4",
+                            "element": "H4"
+                        }
+                    ],
                 }
             },
 
@@ -241,7 +257,7 @@ define(function (require, exports, module) {
              */
             setup: function () {
                 if (this.options.ckeditor && this.toolbarOptions[this.options.ckeditor]) {
-                    this.options.ckeditor.format_tags  = 'p;h3;h4;pre';
+                    this.options.ckeditor.format_tags  = 'p;h1;h2;h3;h4;pre';
                     this.options.ckeditor = this.toolbarOptions[this.options.ckeditor];
                 }
                 this.base();
