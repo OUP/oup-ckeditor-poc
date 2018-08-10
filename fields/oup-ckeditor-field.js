@@ -216,10 +216,6 @@ define(function (require, exports, module) {
                         [
                             "Styles",
                             "-",
-                            "Print",
-                            "Preview",
-                            "PageBreak",
-                            "-",
                             "Italic",
                             "SpecialChar",
                             "Subscript",
