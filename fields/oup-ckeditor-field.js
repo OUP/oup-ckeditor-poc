@@ -191,6 +191,20 @@ define(function (require, exports, module) {
                             "attributes": {
                                 "class": "bullet"
                             }
+                        },
+                        {
+                            "name": "OUP floatLeft Image",
+                            "element": "img",
+                            "attributes": {
+                                "class": "floatLeft"
+                            }
+                        },
+                        {
+                            "name": "OUP floatRight Image",
+                            "element": "img",
+                            "attributes": {
+                                "class": "floatRight"
+                            }
                         }
                     ],
                     "cloudcms-image": {
@@ -236,13 +250,6 @@ define(function (require, exports, module) {
                         {
                             "name": "Heading 4",
                             "element": "H4"
-                        },
-                        {
-                            "name": "OUP Custom Image",
-                            "element": "img",
-                            "attributes": {
-                                "class": "floatLeft"
-                            }
                         }
                     ],
                 }
