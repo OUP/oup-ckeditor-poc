@@ -236,6 +236,13 @@ define(function (require, exports, module) {
                         {
                             "name": "Heading 4",
                             "element": "H4"
+                        },
+                        {
+                            "name": "OUP Custom Image",
+                            "element": "img",
+                            "attributes": {
+                                "class": "floatLeft"
+                            }
                         }
                     ],
                 }
