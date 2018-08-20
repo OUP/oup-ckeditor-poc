@@ -21,6 +21,8 @@ define(function (require, exports, module) {
                             "Cut",
                             "Copy",
                             "Paste",
+                            "PasteText",
+                            "PasteFromWord",
                             "-",
                             "Undo",
                             "Redo"
@@ -68,7 +70,9 @@ define(function (require, exports, module) {
                             "Styles"
                         ],
                         [
-                            "cloudcms-image",
+                            "cloudcms-image"
+                        ],
+                        [
                             "cloudcms-iframe"
                         ]
                     ], 
@@ -87,21 +91,24 @@ define(function (require, exports, module) {
                             "element": "H3"
                         },
                         {
-                            "name": "Heading 4",
-                            "element": "H4"
-                        },
-                        {
-                            "name": "OUP Custom Inline",
-                            "element": "span",
-                            "attributes": {
-                                "class": "mine"
-                            }
-                        },
-                        {
                             "name": "OUP bulleted list",
                             "element": "ul",
                             "attributes": {
                                 "class": "bullet"
+                            }
+                        },
+                        {
+                            "name": "OUP floatLeft Image",
+                            "element": "img",
+                            "attributes": {
+                                "class": "floatLeft"
+                            }
+                        },
+                        {
+                            "name": "OUP floatRight Image",
+                            "element": "img",
+                            "attributes": {
+                                "class": "floatRight"
                             }
                         }
                         
@@ -175,17 +182,6 @@ define(function (require, exports, module) {
                             "element": "H3"
                         },
                         {
-                            "name": "Heading 4",
-                            "element": "H4"
-                        },
-                        {
-                            "name": "OUP Custom Inline",
-                            "element": "span",
-                            "attributes": {
-                                "class": "mine"
-                            }
-                        },
-                        {
                             "name": "OUP bulleted list",
                             "element": "ul",
                             "attributes": {
@@ -212,7 +208,7 @@ define(function (require, exports, module) {
                         "imageUploadPath": "../Image Library",
                         "imagePickerConfig": {
                             "rootContainerPath": "../../..",
-                            "initialContainerPath": "../Image Library"
+                            "initialContainerPath": "../"
                         }
                     }
                 },
@@ -221,8 +217,18 @@ define(function (require, exports, module) {
                         [
                             "Link",
                             "Unlink"
+                        ],
+                        [
+                            "cloudcms-link"
                         ]
-                    ]
+                    ],
+                    "cloudcms-link": {
+                        "linkPickerType": "file-picker",
+                        "linkPickerConfig": {
+                            "rootContainerPath": "../../..",
+                            "initialContainerPath": "/"
+                        }
+                    }
                    
                 },
                 "config5": {
@@ -252,6 +258,110 @@ define(function (require, exports, module) {
                             "element": "H4"
                         }
                     ],
+                },
+                "config6": {
+                    "toolbar": [
+                        [
+                            "Cut",
+                            "Copy",
+                            "Paste",
+                            "-",
+                            "Undo",
+                            "Redo"
+                        ],
+                        [
+                            "Link",
+                            "Unlink",
+                            "Anchor"
+                        ],
+                        [
+                            "Table",
+                            "HorizontalRule",
+                            "SpecialChar"
+                        ],
+                        [
+                            "Maximize",
+                            "ShowBlocks",
+                            "Source",
+                            "Preview"
+                        ],
+                        [
+                            "Bold",
+                            "Italic",
+                            "Strike",
+                            "Subscript",
+                            "Superscript",
+                            "-",
+                            "RemoveFormat"
+                        ],
+                        [
+                            "NumberedList",
+                            "BulletedList",
+                            "-",
+                            "Outdent",
+                            "Indent",
+                            "Blockquote",
+                            "-",
+                            "JustifyLeft",
+                            "JustifyCenter",
+                            "JustifyRight",
+                            "JustifyBlock"
+                        ],
+                        [
+                            "Format",
+                            "Styles"
+                        ],
+                        [
+                            "cloudcms-image"
+                        ],
+                        [
+                            "cloudcms-iframe"
+                        ]
+                    ],
+                    "removeButtons": null,
+                    "stylesSet": [
+                        {
+                            "name": "Paragraph",
+                            "element": "p"
+                        },
+                        {
+                            "name": "Heading 2",
+                            "element": "H2"
+                        },
+                        {
+                            "name": "Heading 3",
+                            "element": "H3"
+                        },
+                        {
+                            "name": "OUP bulleted list",
+                            "element": "ul",
+                            "attributes": {
+                                "class": "bullet"
+                            }
+                        },
+                        {
+                            "name": "OUP floatLeft Image",
+                            "element": "img",
+                            "attributes": {
+                                "class": "floatLeft"
+                            }
+                        },
+                        {
+                            "name": "OUP floatRight Image",
+                            "element": "img",
+                            "attributes": {
+                                "class": "floatRight"
+                            }
+                        }
+                    ],
+                    "cloudcms-image": {
+                        "imagePickerType": "file-picker",
+                        "imageUploadPath": "../Image Library",
+                        "imagePickerConfig": {
+                            "rootContainerPath": "../../..",
+                            "initialContainerPath": "/"
+                        }
+                    }
                 }
             },
 
@@ -267,10 +377,8 @@ define(function (require, exports, module) {
              */
             setup: function () {
                 if (this.options.ckeditor && this.toolbarOptions[this.options.ckeditor]) {
-                    
                     this.options.ckeditor = this.toolbarOptions[this.options.ckeditor];
-
-                    this.options.ckeditor.format_tags  = 'h3;h4;pre';
+                    this.options.ckeditor.format_tags  = 'p;h2;h3;h4;pre';
                 }
                 this.base();
             },
