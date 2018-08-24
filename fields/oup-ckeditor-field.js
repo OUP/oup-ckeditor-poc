@@ -83,14 +83,6 @@ define(function (require, exports, module) {
                             "element": "p"
                         },
                         {
-                            "name": "Heading 2",
-                            "element": "H2"
-                        },
-                        {
-                            "name": "Heading 3",
-                            "element": "H3"
-                        },
-                        {
                             "name": "OUP bulleted list",
                             "element": "ul",
                             "attributes": {
@@ -156,30 +148,23 @@ define(function (require, exports, module) {
                             "Superscript",
                             "SpecialChar",
                             "-",
-                            "RemoveFormat"
+                            "RemoveFormat",
+                            "-",
+                            "ShowBlocks"
                         ],
-                        '/',
                         [
                             "Format",
                             "Styles"
                         ],
                         [
                             "cloudcms-image"
-                        ]
+                        ],
                     ],
                     "removeButtons": null,
                     "stylesSet": [
                         {
                             "name": "Paragraph",
                             "element": "p"
-                        },
-                        {
-                            "name": "Heading 2",
-                            "element": "H2"
-                        },
-                        {
-                            "name": "Heading 3",
-                            "element": "H3"
                         },
                         {
                             "name": "OUP bulleted list",
@@ -228,13 +213,12 @@ define(function (require, exports, module) {
                             "rootContainerPath": "../../..",
                             "initialContainerPath": "/"
                         }
-                    }
-                   
+                    }  
                 },
                 "config5": {
                     "toolbar": [
                         [
-                            "Styles",
+                            "Format",
                             "-",
                             "Italic",
                             "SpecialChar",
@@ -247,17 +231,7 @@ define(function (require, exports, module) {
                             "ShowBlocks"
                         ]
                     ],
-                    "removeButtons": null,                   
-                    "stylesSet": [
-                        {
-                            "name": "Paragraph",
-                            "element": "p"
-                        },
-                        {
-                            "name": "Heading 4",
-                            "element": "H4"
-                        }
-                    ],
+                    "removeButtons": null
                 },
                 "config6": {
                     "toolbar": [
@@ -325,14 +299,6 @@ define(function (require, exports, module) {
                             "element": "p"
                         },
                         {
-                            "name": "Heading 2",
-                            "element": "H2"
-                        },
-                        {
-                            "name": "Heading 3",
-                            "element": "H3"
-                        },
-                        {
                             "name": "OUP bulleted list",
                             "element": "ul",
                             "attributes": {
@@ -359,9 +325,70 @@ define(function (require, exports, module) {
                         "imageUploadPath": "../Image Library",
                         "imagePickerConfig": {
                             "rootContainerPath": "../../..",
-                            "initialContainerPath": "/"
+                            "initialContainerPath": "./"
                         }
                     }
+                },
+                "config7": {
+                    "toolbar": [
+                        [
+                            "Cut",
+                            "Copy",
+                            "Paste",
+                            "-",
+                            "Undo",
+                            "Redo"
+                        ],
+                        [
+                            "Link",
+                            "Unlink"
+                        ],
+                        [
+                            "Bold",
+                            "Italic",
+                            "BulletedList",
+                            "Strike",
+                            "Subscript",
+                            "Superscript",
+                            "SpecialChar",
+                            "-",
+                            "RemoveFormat",
+                            "-",
+                            "ShowBlocks"
+                        ],
+                        [
+                            "Format",
+                            "Styles"
+                        ]
+                    ],
+                    "removeButtons": null,
+                    "stylesSet": [
+                        {
+                            "name": "Paragraph",
+                            "element": "p"
+                        },
+                        {
+                            "name": "OUP bulleted list",
+                            "element": "ul",
+                            "attributes": {
+                                "class": "bullet"
+                            }
+                        },
+                        {
+                            "name": "OUP floatLeft Image",
+                            "element": "img",
+                            "attributes": {
+                                "class": "floatLeft"
+                            }
+                        },
+                        {
+                            "name": "OUP floatRight Image",
+                            "element": "img",
+                            "attributes": {
+                                "class": "floatRight"
+                            }
+                        }
+                    ]
                 }
             },
 
@@ -377,8 +404,13 @@ define(function (require, exports, module) {
              */
             setup: function () {
                 if (this.options.ckeditor && this.toolbarOptions[this.options.ckeditor]) {
+                    var type = this.options.ckeditor;
                     this.options.ckeditor = this.toolbarOptions[this.options.ckeditor];
-                    this.options.ckeditor.format_tags  = 'p;h2;h3;h4;pre';
+                    if(type && type == "config5"){
+                        this.options.ckeditor.format_tags  = 'p;h4;pre';
+                    } else {
+                        this.options.ckeditor.format_tags  = 'p;h2;h3;pre';
+                    }
                 }
                 this.base();
             },
