@@ -202,8 +202,18 @@ define(function (require, exports, module) {
                         [
                             "Link",
                             "Unlink"
-                        ]  
-                    ]
+                        ],
+                        [
+                            "cloudcms-link"
+                        ]
+                    ],
+                    "cloudcms-link": {
+                        "linkPickerType": "file-picker",
+                        "linkPickerConfig": {
+                            "rootContainerPath": "../../..",
+                            "initialContainerPath": "/"
+                        }
+                    }  
                 },
                 "config5": {
                     "toolbar": [
