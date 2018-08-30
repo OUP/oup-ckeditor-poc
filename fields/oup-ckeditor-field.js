@@ -68,12 +68,6 @@ define(function (require, exports, module) {
                         [
                             "Format",
                             "Styles"
-                        ],
-                        [
-                            "cloudcms-image"
-                        ],
-                        [
-                            "cloudcms-iframe"
                         ]
                     ], 
                     "removeButtons": null,                   
@@ -81,6 +75,13 @@ define(function (require, exports, module) {
                         {
                             "name": "Paragraph",
                             "element": "p"
+                        },
+                        {
+                            "name": "OUP Notice",
+                            "element": "div",
+                            "attributes": {
+                                "class": "notice"
+                            }
                         },
                         {
                             "name": "OUP bulleted list",
@@ -104,15 +105,9 @@ define(function (require, exports, module) {
                             }
                         }
                         
+                        
                     ],
-                    "cloudcms-image": {
-                        "imagePickerType": "file-picker",
-                        "imageUploadPath": "../Image Library",
-                        "imagePickerConfig": {
-                            "rootContainerPath": "../../..",
-                            "initialContainerPath": "../Image Library"
-                        }
-                    },
+                    
                     
                 },
                 "config2": {
